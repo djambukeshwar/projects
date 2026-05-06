@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Training Trains Software Solutions</title>
+
+<style>
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    width:100%;
+    padding:80px 8%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container{
+    width:100%;
+    max-width:1900px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(8px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 6%;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.logo span{
+    color:red;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.4s;
+}
+
+nav ul li a:hover{
+    color:red;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2{
+    background:red;
+    color:white;
+    display:inline-block;
+    padding:12px 25px;
+    margin-bottom:30px;
+    border-radius:8px;
+    font-size:38px;
+    letter-spacing:1px;
+    animation:slideDown 1s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+#home{
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+.home-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    width:100%;
+}
+
+.home-text{
+    flex:1;
+    animation:fadeLeft 1.5s ease;
+}
+
+.home-text h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.home-text h1 span{
+    color:red;
+}
+
+.home-text p{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.btn{
+    padding:14px 35px;
+    background:red;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    transition:0.4s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+    color:red;
+    transform:scale(1.05);
+}
+
+.home-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.home-image img{
+    width:90%;
+    border-radius:20px;
+    box-shadow:0 0 30px red;
+    animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0px);}
+}
+
+@keyframes fadeLeft{
+    from{
+        opacity:0;
+        transform:translateX(-60px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* =========================
+   ABOUT
+========================= */
+#about{
+    background:#1b1b1b;
+}
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-wrapper img{
+    width:100%;
+    border-radius:20px;
+    transition:0.5s;
+}
+
+.about-wrapper img:hover{
+    transform:scale(1.03);
+}
+
+.about-text p{
+    font-size:22px;
+    line-height:1.9;
+}
+
+/* =========================
+   COURSES
+========================= */
+#courses{
+    background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.course-card{
+    background:#222;
+    padding:30px;
+    border-radius:20px;
+    transition:0.5s;
+    text-align:center;
+    border:2px solid transparent;
+}
+
+.course-card:hover{
+    transform:translateY(-12px);
+    border-color:red;
+    box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+.course-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.course-card h3{
+    color:red;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.course-card p{
+    line-height:1.7;
+}
+
+/* =========================
+   PRODUCTS PAGE
+========================= */
+#products{
+    background:#111;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.product-card{
+    background:#1f1f1f;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.product-card:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+.product-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.product-card .info{
+    padding:25px;
+}
+
+.product-card h3{
+    color:red;
+    margin-bottom:15px;
+}
+
+/* =========================
+   LOGIN
+========================= */
+#login{
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+.login-box{
+    width:500px;
+    background:rgba(255,255,255,0.08);
+    padding:50px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(255,0,0,0.4);
+}
+
+.login-box input{
+    width:100%;
+    padding:18px;
+    margin:15px 0;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+}
+
+.login-box button{
+    width:100%;
+    padding:18px;
+    border:none;
+    background:red;
+    color:white;
+    font-size:20px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.login-box button:hover{
+    background:white;
+    color:red;
+}
+
+/* =========================
+   CONTACT
+========================= */
+#contact{
+    background:#181818;
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.contact-info{
+    font-size:24px;
+    line-height:2;
+}
+
+.contact-info span{
+    color:red;
+    font-weight:bold;
+}
+
+.contact-wrapper img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background:black;
+    padding:20px;
+    text-align:center;
+    font-size:18px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Large Screens */
+@media(max-width:1600px){
+    .home-text h1{
+        font-size:55px;
+    }
+}
+
+/* Laptop */
+@media(max-width:1200px){
+    .course-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .home-content,
+    .about-wrapper,
+    .contact-wrapper{
+        flex-direction:column;
+        grid-template-columns:1fr;
+    }
+}
+
+/* Tablet */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .home-text h1{
+        font-size:40px;
+    }
+
+    .home-text p,
+    .about-text p,
+    .contact-info{
+        font-size:18px;
+    }
+
+    .course-grid,
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .login-box{
+        width:100%;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+    h2{
+        font-size:28px;
+    }
+
+    .home-text h1{
+        font-size:32px;
+    }
+
+    .btn{
+        display:inline-block;
+        margin-top:10px;
+    }
+
+    section{
+        padding:100px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">
+        Training <span>Trains</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+<div class="container home-content">
+
+<div class="home-text">
+    <h1>Training Trains <span>Software Solutions</span></h1>
+    <p>
+        We provide internships, software solutions, web development,
+        AI technologies, cloud services and advanced digital transformation.
+    </p>
+
+    <a href="#courses" class="btn">Explore Services</a>
+</div>
+
+<div class="home-image">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container about-wrapper">
+
+<div>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="about-text">
+    <h2>About Us</h2>
+
+    <p>
+        Training Trains Software Solutions provides both internship
+        training and professional software solutions for students,
+        startups and businesses. We are located at Perundurai and
+        Mullamparappu delivering innovative technology services
+        with practical industry experience.
+    </p>
+</div>
+
+</div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+<div class="container">
+
+<h2>Our Courses & Services</h2>
+
+<div class="course-grid">
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop">
+    <h3>Website Design</h3>
+    <p>Modern responsive website development with advanced UI/UX design.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop">
+    <h3>Android App Development</h3>
+    <p>Professional Android applications for startups and enterprises.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop">
+    <h3>Custom Software</h3>
+    <p>Customized software systems for businesses and industries.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop">
+    <h3>Artificial Intelligence</h3>
+    <p>AI powered automation, machine learning and smart applications.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop">
+    <h3>Data Science</h3>
+    <p>Data analytics, prediction models and business intelligence systems.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=1200&auto=format&fit=crop">
+    <h3>Cyber Security</h3>
+    <p>Security solutions for networks, systems and cloud infrastructure.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+    <h3>IoT Solutions</h3>
+    <p>Smart IoT devices and automation systems for industries.</p>
+</div>
+
+<div class="course-card">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+    <h3>Digital Marketing & SEO</h3>
+    <p>Improve online visibility with SEO and advanced digital marketing.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+<div class="container">
+
+<h2>Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop">
+    <div class="info">
+        <h3>Digital Product Management</h3>
+        <p>Advanced software platforms for product and inventory management.</p>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+    <div class="info">
+        <h3>Business Solutions</h3>
+        <p>Professional enterprise software solutions for modern companies.</p>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- LOGIN -->
+<section id="login">
+<div class="container" style="display:flex;justify-content:center;">
+
+<div class="login-box">
+    <h2>Customer Login</h2>
+
+    <input type="text" placeholder="Enter Username">
+
+    <input type="password" placeholder="Enter Password">
+
+    <button>Login</button>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container contact-wrapper">
+
+<div class="contact-info">
+    <h2>Contact Us</h2>
+
+    <p><span>Phone:</span> 9698584336</p>
+    <p><span>Email:</span> ceo@trainingtrains.com</p>
+    <p><span>Location 1:</span> Perundurai</p>
+    <p><span>Location 2:</span> Mullamparappu</p>
+
+</div>
+
+<div>
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Training Trains Software Solutions | All Rights Reserved
+</footer>
+
+</body>
+</html>

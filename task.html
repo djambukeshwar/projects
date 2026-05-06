@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Trains Software Solutions</title>
+
+<style>
+
+/* ===== GENERAL ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* ===== NAVBAR ===== */
+
+nav{
+    width:100%;
+    background:black;
+    padding:20px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    text-align:center;
+}
+
+nav ul li{
+    display:inline-block;
+    margin:0 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:red;
+}
+
+/* ===== SECTIONS ===== */
+
+section{
+    min-height:100vh;
+    padding:120px 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* ===== HOME ===== */
+
+#home{
+    background:#111;
+    color:white;
+}
+
+.home-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.home-content span{
+    color:red;
+}
+
+.home-content p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* ===== COMMON HEADING ===== */
+
+h2{
+    background:red;
+    color:white;
+    padding:12px 25px;
+    display:inline-block;
+    margin-bottom:25px;
+}
+
+/* ===== ABOUT ===== */
+
+#about{
+    background:white;
+    color:black;
+}
+
+.about-content{
+    max-width:900px;
+}
+
+.about-content p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* ===== COURSES ===== */
+
+#courses{
+    background:#222;
+    color:white;
+}
+
+.course-container{
+    width:100%;
+}
+
+.course-box{
+    background:black;
+    padding:25px;
+    margin:20px;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.course-box:hover{
+    background:red;
+    transform:scale(1.05);
+}
+
+.course-box h3{
+    margin-bottom:15px;
+}
+
+/* ===== LOGIN ===== */
+
+#login{
+    background:#eee;
+}
+
+.login-form{
+    background:white;
+    padding:40px;
+    width:500px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+.login-form input{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+.login-form button{
+    width:100%;
+    padding:15px;
+    background:red;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-form button:hover{
+    background:black;
+}
+
+/* ===== CONTACT ===== */
+
+#contact{
+    background:#111;
+    color:white;
+}
+
+.contact-content p{
+    font-size:24px;
+    margin:15px 0;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large Screen */
+@media(max-width:1400px){
+
+    .home-content h1{
+        font-size:50px;
+    }
+}
+
+/* Laptop */
+@media(max-width:1024px){
+
+    .home-content h1{
+        font-size:42px;
+    }
+
+    .course-box{
+        margin:15px;
+    }
+}
+
+/* Tablet */
+@media(max-width:768px){
+
+    nav ul li{
+        display:block;
+        margin:10px 0;
+    }
+
+    .home-content h1{
+        font-size:35px;
+    }
+
+    .about-content p,
+    .contact-content p{
+        font-size:20px;
+    }
+
+    .login-form{
+        width:100%;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    .home-content h1{
+        font-size:28px;
+    }
+
+    .home-content p{
+        font-size:18px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    .about-content p,
+    .contact-content p{
+        font-size:18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+
+<section id="home">
+
+<div class="home-content">
+
+<h1>
+Training <span>Trains</span><br>
+Software Solutions
+</h1>
+
+<p>
+Training Trains provides Internship Training and Software Solutions
+for students and businesses.
+</p>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about-content">
+
+<h2>About Us</h2>
+
+<p>
+Training Trains Software Solutions provides internship training and
+software development services. We are located at Perundurai and
+Mullamparappu. We help students improve their technical skills and
+build software solutions for businesses.
+</p>
+
+</div>
+
+</section>
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<div class="course-container">
+
+<h2>Courses</h2>
+
+<div class="course-box">
+    <h3>Website Design</h3>
+    <p>Responsive and modern website development training.</p>
+</div>
+
+<div class="course-box">
+    <h3>Android App Development</h3>
+    <p>Build Android mobile applications using latest technologies.</p>
+</div>
+
+<div class="course-box">
+    <h3>Custom Software Development</h3>
+    <p>Create business software applications and management systems.</p>
+</div>
+
+<div class="course-box">
+    <h3>Artificial Intelligence</h3>
+    <p>Learn AI concepts and smart application development.</p>
+</div>
+
+<div class="course-box">
+    <h3>Data Science</h3>
+    <p>Data analysis and machine learning concepts.</p>
+</div>
+
+<div class="course-box">
+    <h3>Cyber Security</h3>
+    <p>Learn system security and cyber protection techniques.</p>
+</div>
+
+<div class="course-box">
+    <h3>IoT Solutions</h3>
+    <p>Internet of Things and smart device development.</p>
+</div>
+
+<div class="course-box">
+    <h3>Digital Marketing & SEO</h3>
+    <p>Improve business visibility using SEO and marketing tools.</p>
+</div>
+
+<div class="course-box">
+    <h3>Cloud Services</h3>
+    <p>Cloud storage and deployment technologies.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- LOGIN -->
+
+<section id="login">
+
+<div class="login-form">
+
+<h2>Student Registration</h2>
+
+<input type="text" placeholder="Student Name">
+
+<input type="text" placeholder="Roll Number">
+
+<input type="text" placeholder="Mobile Number">
+
+<input type="text" placeholder="Domain">
+
+<button>Register</button>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact-content">
+
+<h2>Contact Us</h2>
+
+<p>Phone Number : 9698584336</p>
+
+<p>Email : ceo@trainingtrains.com</p>
+
+<p>Location : Perundurai & Mullamparappu</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 Training Trains Software Solutions
+</footer>
+
+</body>
+</html>
