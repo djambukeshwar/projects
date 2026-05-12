@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burger King</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }body {
+    scroll-behavior: smooth;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #c40000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.images {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.images img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+</style>
+</head>
+<body><nav>
+    <a href="#home">Home</a>
+    <a href="#burgers">Burgers</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#special">Special</a>
+</nav><section id="home">
+    <h1>Burger King</h1>
+    <p>Delicious Burgers Made Just for You!</p>
+    <div class="images">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Burger">
+    </div>
+</section><section id="burgers">
+    <h1>Our Burgers</h1>
+    <p>Juicy, Crispy, and Full of Flavor</p>
+    <div class="images">
+        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b" alt="Burger">
+        <img src="https

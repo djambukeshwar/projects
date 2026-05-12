@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Trains</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f7fb;
+      color:#333;
+    }
+
+    header{
+      background:#0d6efd;
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:40px;
+    }
+
+    header p{
+      margin-top:10px;
+      font-size:18px;
+    }
+
+    nav{
+      margin-top:15px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:yellow;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content{
+      animation:fadeIn 2s ease;
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      background:#0d6efd;
+      color:white;
+      padding:12px 25px;
+      border:none;
+      border-radius:5px;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#084298;
+    }
+
+    section{
+      padding:60px 10%;
+    }
+
+    .title{
+      text-align:center;
+      color:#0d6efd;
+      margin-bottom:40px;
+      font-size:35px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.4s;
+      cursor:pointer;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#0d6efd;
+      color:white;
+    }
+
+    .locations{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+    }
+
+    .location-box{
+      background:white;
+      padding:25px;
+      width:280px;
+      border-radius:10px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .location-box:hover{
+      transform:scale(1.05);
+    }
+
+    .contact{
+      background:#0d6efd;
+      color:white;
+      text-align:center;
+      padding:50px 20px;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:15px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+      .hero h2{
+        font-size:35px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Training Trains</h1>
+    <p>Software Solutions & Internship Services</p>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#domains">Domains</a>
+      <a href="#locations">Locations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Learn • Build • Grow</h2>
+      <p>
+        Real-time internships and software solutions for future professionals.
+      </p>
+
+      <a href="#domains" class="btn">Explore Domains</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="title">About Us</h2>
+
+    <div class="card">
+      <p>
+        Training Trains provides industry-based internship programs and
+        software solutions to help students gain practical skills and
+        career opportunities in modern technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Domains -->
+  <section id="domains">
+    <h2 class="title">Internship Domains</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Web Development</h3>
+      </div>
+
+      <div class="card">
+        <h3>Digital Marketing & SEO</h3>
+      </div>
+
+      <div class="card">
+        <h3>Cyber Security</h3>
+      </div>
+
+      <div class="card">
+        <h3>IoT</h3>
+      </div>
+
+      <div class="card">
+        <h3>Artificial Intelligence</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section id="locations">
+    <h2 class="title">Our Locations</h2>
+
+    <div class="locations">
+
+      <div class="location-box">
+        <h3>Perundurai</h3>
+        <p>Training & Internship Center</p>
+      </div>
+
+      <div class="location-box">
+        <h3>Mullamparappu</h3>
+        <p>Software Solutions & Training</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <p>📞 9698563348</p>
+    <p>✉ ceo@trainingtrains.con</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Training Trains | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
