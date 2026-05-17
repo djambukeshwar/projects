@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Page</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+    }
+
+    header{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+    }
+
+    header h1{
+      margin-bottom:10px;
+    }
+
+    .course-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      padding:40px 20px;
+    }
+
+    .course-card{
+      background:white;
+      width:300px;
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .course-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .course-card img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:15px;
+    }
+
+    .course-card h2{
+      margin-bottom:10px;
+      color:#333;
+    }
+
+    .course-card p{
+      color:#666;
+      margin-bottom:15px;
+    }
+
+    .price{
+      font-size:22px;
+      color:#007bff;
+      margin-bottom:15px;
+      font-weight:bold;
+    }
+
+    button{
+      padding:10px 20px;
+      border:none;
+      background:#007bff;
+      color:white;
+      border-radius:5px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#0056b3;
+    }
+
+    @media(max-width:768px){
+      .course-container{
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Courses</h1>
+    <p>Learn Web Development Easily</p>
+  </header>
+
+  <section class="course-container">
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="HTML Course">
+      <h2>HTML Basics</h2>
+      <p>Learn the structure of websites using HTML.</p>
+      <div class="price">₹999</div>
+      <button onclick="enroll('HTML Basics')">Enroll Now</button>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="CSS Course">
+      <h2>CSS Mastery</h2>
+      <p>Create beautiful and responsive websites.</p>
+      <div class="price">₹1499</div>
+      <button onclick="enroll('CSS Mastery')">Enroll Now</button>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="JavaScript Course">
+      <h2>JavaScript</h2>
+      <p>Add interactivity and dynamic features.</p>
+      <div class="price">₹1999</div>
+      <button onclick="enroll('JavaScript')">Enroll Now</button>
+    </div>
+
+  </section>
+
+  <script>
+    function enroll(courseName){
+      alert("Successfully enrolled in " + courseName);
+    }
+  </script>
+
+</body>
+</html>
