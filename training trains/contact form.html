@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .contact-box{
+      background:white;
+      width:350px;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-box h2{
+      text-align:center;
+      margin-bottom:20px;
+      color:#333;
+    }
+
+    .input-group{
+      margin-bottom:15px;
+    }
+
+    .input-group label{
+      display:block;
+      margin-bottom:5px;
+      color:#555;
+    }
+
+    .input-group input,
+    .input-group textarea{
+      width:100%;
+      padding:10px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      outline:none;
+    }
+
+    textarea{
+      resize:none;
+      height:100px;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      border:none;
+      background:#007bff;
+      color:white;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#0056b3;
+    }
+
+    .success{
+      color:green;
+      text-align:center;
+      margin-top:15px;
+      display:none;
+    }
+
+    @media(max-width:400px){
+      .contact-box{
+        width:90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+
+      <div class="input-group">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="input-group">
+        <label>Message</label>
+        <textarea id="message" placeholder="Enter your message"></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+
+      <p class="success" id="successMsg">
+        Message Sent Successfully!
+      </p>
+
+    </form>
+  </div>
+
+  <script>
+
+    const form = document.getElementById("contactForm");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function(event){
+
+      event.preventDefault();
+
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let message = document.getElementById("message").value.trim();
+
+      if(name === "" || email === "" || message === ""){
+        alert("Please fill all fields");
+        return;
+      }
+
+      if(!email.includes("@") || !email.includes(".")){
+        alert("Please enter a valid email");
+        return;
+      }
+
+      successMsg.style.display = "block";
+
+      form.reset();
+
+    });
+
+  </script>
+
+</body>
+</html>
