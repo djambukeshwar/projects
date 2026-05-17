@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Navbar & Footer</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* Navbar */
+    .navbar{
+      background:#222;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+      position:relative;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    .nav-links{
+      display:flex;
+      list-style:none;
+    }
+
+    .nav-links li{
+      margin-left:20px;
+    }
+
+    .nav-links a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .nav-links a:hover{
+      color:yellow;
+    }
+
+    /* Menu Button */
+    .menu-btn{
+      display:none;
+      font-size:28px;
+      background:none;
+      border:none;
+      color:white;
+      cursor:pointer;
+    }
+
+    /* Main Content */
+    .content{
+      flex:1;
+      text-align:center;
+      padding:80px 20px;
+    }
+
+    .content h1{
+      margin-bottom:15px;
+      color:#333;
+    }
+
+    .content p{
+      font-size:18px;
+      color:#666;
+    }
+
+    /* Footer */
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .footer-links{
+      margin-top:10px;
+    }
+
+    .footer-links a{
+      color:lightblue;
+      text-decoration:none;
+      margin:0 10px;
+      transition:0.3s;
+    }
+
+    .footer-links a:hover{
+      color:yellow;
+    }
+
+    /* Mobile Responsive */
+    @media(max-width:768px){
+
+      .menu-btn{
+        display:block;
+      }
+
+      .nav-links{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#333;
+        position:absolute;
+        top:60px;
+        left:0;
+        text-align:center;
+      }
+
+      .nav-links li{
+        margin:15px 0;
+      }
+
+      .nav-links.show{
+        display:flex;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+
+    <div class="logo">TRAINING TRAINS</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  </nav>
+  <!-- Content -->
+  <section class="content">
+    <h1>Welcome to Training Trains</h1>
+    <p>Simple and interactive navigation menu with footer.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Trainingtrains | All Rights Reserved</p>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu(){
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

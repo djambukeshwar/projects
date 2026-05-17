@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainingtrains</title>
+    <link rel="icon" typle="image/x-icon" href="images\removed.png">
+</head>
+<style>
+    :root{
+        --bg-color: #f1f1f1;
+        --text: #333;
+        --white: #fff;
+        
+        --active: #ff6600;
+        --active-dark: #bb4b00;
+        --normal: #555;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    body{
+        background-color:  var(--bg-color);
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10%;
+        background-color: #333;
+    }
+    .logo{
+        cursor: pointer;
+        font-size: 25px;
+        text-transform:uppercase;
+        letter-spacing: 1px;
+        color: var(--active);
+        font-weight: bold;
+    }
+    .nav-links {
+        list-style: none;
+    }
+    .navigation li {
+        display: inline-block;
+        padding: 0px 20px;
+
+    }
+    .navigation li a{
+        transition: 0.5s;
+        font-size: 18px;
+    }
+    .action{
+        color: var(--active);
+        padding: 9px 25px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 25px;
+        transition: transform0.6s;
+    }
+    .action:hover{
+        transform: scale(1.1);
+        color: var(--active-dark);
+    }
+    .navigation li a:hover{
+        color: #bb4b00;
+    }
+    h2{
+        text-align: center;
+        background-color: black;
+        color: white;
+
+    }
+</style>
+<body>
+    <header>
+        <a href="#" class="logo">TRAINING TRAINS</a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="action">ENROLL</a>
+    </header>
+    <h2>TRAINING TRAINS</h2>
+</body>
+</html>
